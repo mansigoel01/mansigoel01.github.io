@@ -1,0 +1,178 @@
+---
+layout: default
+title : Homepage
+navbar_title: Home
+---
+
+<div class="row">
+    <div class="col-lg-3 col-md-4">
+        {% include widgets/profile_card_mini.html %}
+    </div>
+    <div class="col-lg-9 col-md-8">
+
+        <!-- 1. Bio -->
+        {% include widgets/profile_card_bio_only.html %}
+
+        <!-- 2. CV and Skillset -->
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-file-alt"></i> CV & Skillset</h5>
+                <p>
+                    <a href="{{ '/assets/Mansi_Goel_CV_2026.pdf' | relative_url }}" class="btn btn-primary btn-sm mb-3"
+                        target="_blank">
+                        <i class="fas fa-file-pdf"></i> Download Full CV
+                    </a>
+                </p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success"></i> Machine Learning</li>
+                            <li><i class="fas fa-check text-success"></i> Deep Learning</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success"></i> NLP</li>
+                            <li><i class="fas fa-check text-success"></i> Data Science</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success"></i> Web Development</li>
+                            <li><i class="fas fa-check text-success"></i> Generative Algorithms</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Education and Experience -->
+        {% if site.data.display.homepage.show_experience %}
+        {% include widgets/experience_card.html %}
+        {% endif %}
+
+        <!-- 4. Publications -->
+        {% if site.data.display.homepage.show_selected_publications %}
+        {% assign pubs = site.publications | sort: "date" | reverse | where: "selected", true %}
+        {%
+        include widgets/publication_card.html
+        publications=pubs
+        title='<i class="fas fa-star"></i> Selected Publications'
+        limit=5
+        %}
+        {% endif %}
+
+        <!-- 5. Projects -->
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-project-diagram"></i> Projects</h5>
+                <div class="row">
+                    <!-- Project 1 -->
+                    <div class="col-md-6 mb-3">
+                        <div class="p-3 border rounded h-100 bg-light shadow-sm hover-effect">
+                            <h6 class="mb-1">
+                                <a href="https://cosylab.iiitd.edu.in/ttc/" target="_blank"><i
+                                        class="fas fa-utensils text-primary"></i>
+                                    Turing Test for Chefs</a>
+                            </h6>
+                            <p class="small text-muted mb-0">Evaluated recipe generation models with human experts.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="col-md-6 mb-3">
+                        <div class="p-3 border rounded h-100 bg-light shadow-sm hover-effect">
+                            <h6 class="mb-1">
+                                <a href="https://cosylab.iiitd.edu.in/sweetpred/" target="_blank"><i
+                                        class="fas fa-flask text-success"></i> Flavor Profile Prediction</a>
+                            </h6>
+                            <p class="small text-muted mb-0">Web server for predicting the flavor profile of molecules
+                                and ingredient categories.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="col-md-6 mb-3">
+                        <div class="p-3 border rounded h-100 bg-light shadow-sm hover-effect">
+                            <h6 class="mb-1">
+                                <a href="https://cosylab.iiitd.edu.in/foodle/" target="_blank"><i
+                                        class="fas fa-gamepad text-info"></i>
+                                    Foodle</a>
+                            </h6>
+                            <p class="small text-muted mb-0">Food-related game to learn about food.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="col-md-6 mb-3">
+                        <div class="p-3 border rounded h-100 bg-light shadow-sm hover-effect">
+                            <h6 class="mb-1">
+                                <a href="https://cosylab.iiitd.edu.in/ratatouille/" target="_blank"><i
+                                        class="fas fa-project-diagram text-warning"></i> Recipe Generation</a>
+                            </h6>
+                            <p class="small text-muted mb-0">Generative models for cultural recipes.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="col-md-6 mb-3">
+                        <div class="p-3 border rounded h-100 bg-light shadow-sm hover-effect">
+                            <h6 class="mb-1">
+                                <a href="https://cosylab.iiitd.edu.in/SustainableFoodDB/" target="_blank"><i
+                                        class="fas fa-leaf text-success"></i> SustainableFoodDB</a>
+                            </h6>
+                            <p class="small text-muted mb-0">Sustainable food database and carbon footprint calculator
+                                for recipes</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="col-md-6 mb-3">
+                        <div class="p-3 border rounded h-100 bg-light shadow-sm hover-effect">
+                            <h6 class="mb-1">
+                                <a href="https://www.foodoscope.com/" target="_blank"><i
+                                        class="fas fa-server text-secondary"></i> Computational Gastronomy APIs</a>
+                            </h6>
+                            <p class="small text-muted mb-0">APIs for recipes and flavor molecules for computational
+                                gastronomy research.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. Highlights -->
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title"><i class="fas fa-camera"></i> Highlights</h5>
+                <div class="row">
+                    <div class="col-md-4 mb-3 d-flex align-items-stretch">
+                        <img src="{{ '/assets/images/highlights/whatdish.jpg' | relative_url }}"
+                            class="img-fluid rounded shadow-sm hover-effect" style="object-fit: cover;">
+                    </div>
+                    <div class="col-md-4 mb-3 d-flex align-items-stretch">
+                        <img src="{{ '/assets/images/highlights/sweetpred.jpg' | relative_url }}"
+                            class="img-fluid rounded shadow-sm hover-effect" style="object-fit: cover;">
+                    </div>
+                    <div class="col-md-4 mb-3 d-flex align-items-stretch">
+                        <img src="{{ '/assets/images/highlights/news-foodle.jpg' | relative_url }}"
+                            class="img-fluid rounded shadow-sm hover-effect" style="object-fit: cover;">
+                    </div>
+                    <div class="col-md-4 mb-3 d-flex align-items-stretch">
+                        <img src="{{ '/assets/images/highlights/news-ttc.jpg' | relative_url }}"
+                            class="img-fluid rounded shadow-sm hover-effect" style="object-fit: cover;">
+                    </div>
+                    <div class="col-md-4 mb-3 d-flex align-items-stretch">
+                        <img src="{{ '/assets/images/highlights/rata.jpg' | relative_url }}"
+                            class="img-fluid rounded shadow-sm hover-effect" style="object-fit: cover;">
+                    </div>
+                    <div class="col-md-4 mb-3 d-flex align-items-stretch">
+                        <img src="{{ '/assets/images/highlights/sust1.jpg' | relative_url }}"
+                            class="img-fluid rounded shadow-sm hover-effect" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

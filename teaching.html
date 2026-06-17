@@ -1,0 +1,19 @@
+---
+layout: default
+title : Teaching
+navbar_title: Teaching
+---
+
+{% assign teaching_list = site.teaching | sort: "date" | reverse %}
+
+<div class="row">
+    <div class="col-12 col-lg-12">
+        <!-- <h3 class="mb-4"><i class="fas fa-chalkboard-teacher"></i> Teaching Experience</h3> -->
+        <div class="my-0 p-0 bg-white shadow-sm rounded-xl">
+            {% for item in teaching_list %}
+            {% include widgets/publication_item.html item=item hide_bottom_border=forloop.last first=forloop.first
+            last=forloop.last %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
