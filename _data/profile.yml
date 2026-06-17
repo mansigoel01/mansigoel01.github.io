@@ -1,0 +1,55 @@
+primary_name: "Mansi Goel"
+secondary_name: ""
+navbar_name: "Mansi Goel"
+
+positions:
+- name: Postdoctoral Researcher
+- name: University of Copenhagen, Denmark
+
+email: "mansig@iiitd.ac.in"
+secondary_email: "mansi@food.ku.dk"
+# cv_link: /assets/Mansi_Goel_CV_2026.pdf
+github: mansigoel01
+twitter: goelmags
+linkedin: mansigoel01
+gscholar: 4_X0c9AAAAAJ
+
+short_bio_text_justify: false
+short_bio: >-
+  <p>
+    Hello! My name is Mansi Goel. I am a Postdoctoral Researcher at the <strong>University of Copenhagen, Denmark</strong>. My research focuses on leveraging Machine Learning, Natural Language Processing (NLP), Large Language Models (LLMs), and Data Science to revolutionize the food and flavor—an emerging domain known as Computational Gastronomy.
+  </p>
+  <p>
+    Before joining the University of Copenhagen, I completed my <strong>PhD</strong> at IIIT-Delhi, India. My doctoral research, supervised by Dr. Ganesh Bagler, explored how AI can make food computable, leading to tools for novel recipe generation, predictive models for molecular toxicity and sweetness, and comprehensive databases like FlavorDB2. I am passionate about developing AI-driven methods that bridge the gap between traditional food science and modern computational techniques.
+  </p>
+  <p>
+    During my PhD, I had the opportunity to work as a Visiting Researcher at the National Institute of Informatics in Japan. My earlier academic journey includes a Dual Degree (B.Tech & M.Tech) in Computer Science and Engineering from JIIT Noida, where I laid my foundation in algorithms and computational modeling.
+  </p>
+  <p>
+    Thank you for visiting my website! I am always interested in meaningful collaborations in the areas of computational gastronomy, predictive modeling, and applied AI in life sciences. Feel free to reach out if you’d like to discuss research ideas or potential collaborations.
+  </p>
+
+portrait_url: /assets/images/about.jpg
+portrait_caption: 
+
+education:
+- name: Indraprastha Institute of Information Technology Delhi (IIIT-Delhi)
+  position: PhD Researcher
+  date: 2020 - 2025
+- name: Jaypee Institute of Information Technology (JIIT), Noida
+  position: Dual Degree B.Tech-M.Tech in Computer Science & Engineering
+  date: 2015 - 2020
+
+experience:
+- name: University of Copenhagen, Denmark
+  position: Postdoctoral Researcher
+  date: 2025 - present
+- name: National Institute of Informatics, Japan
+  position: Visiting Researcher
+  date: Oct 2024 - March 2025
+- name: IIIT-Delhi
+  position: Teaching Assistant
+  date: 2020 - 2024
+- name: NTPC Noida
+  position: Web Designer
+  date: May 2018 - July 2018
